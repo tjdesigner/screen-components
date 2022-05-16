@@ -9,18 +9,13 @@ import {
   LabelName,
   LabelReward,
   LabelRewardInfo,
-  LabelTagMedium,
-  LabelTagNear,
-  LabelTagTagAway,
   LabelTitleList,
   Logo,
   SectionLegend,
   SectionList,
   SectionReward,
-  TagAway,
-  TagMedium,
-  TagNear,
 } from "./partner-main-screen-style"
+import Tag from "./../components/Tag"
 const LogoMocar = require("./../../assets/logo.png")
 const ImgMocar = require("./../../assets/Grupo_348.png")
 
@@ -39,15 +34,13 @@ const PartnerMainScreen = ({ navigation }) => (
     <SectionList>
       <LabelTitleList>Desaparecidos:</LabelTitleList>
       <SectionLegend>
-        <TagNear>
-          <LabelTagNear>próximos</LabelTagNear>
-        </TagNear>
-        <TagMedium>
-          <LabelTagMedium>média distância</LabelTagMedium>
-        </TagMedium>
-        <TagAway>
-          <LabelTagTagAway>distantes</LabelTagTagAway>
-        </TagAway>
+        <Tag backgroundColor="#cef2a4" color="#138b13" LabelName="próximos" />
+        <Tag
+          backgroundColor="#fbdd68"
+          color="#604a00"
+          LabelName="média distância"
+        />
+        <Tag backgroundColor="#f2a4a4" color="#c40000" LabelName="distantes" />
       </SectionLegend>
     </SectionList>
   </Container>

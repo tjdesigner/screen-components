@@ -1,8 +1,6 @@
 import styled from 'styled-components/native';
 import {Platform} from 'react-native'
 
-console.log(Platform.OS === "ios")
-
 export const Container = styled.ScrollView.attrs({
   contentContainerStyle: {
     flexGrow: 1,

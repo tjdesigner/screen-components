@@ -76,7 +76,7 @@ import {
 import { Tag, RewardCard, MoedaBRL } from "./../components"
 import { View, Text } from "react-native"
 import { formataMoeda } from "./../utils/"
-import { IconCarPartner } from "./../assets/icons"
+import { IconCar } from "./../assets/icons"
 const LogoMocar = require("./../../assets/logo.png")
 const ImgMocar = require("./../../assets/Grupo_348.png")
 
@@ -152,7 +152,6 @@ const PartnerMainScreen = ({ navigation }) => {
                   justifyContent: "space-between",
                 }}
               >
-                {console.log(index)}
                 <View
                   style={{
                     flexDirection: "row",
@@ -167,7 +166,7 @@ const PartnerMainScreen = ({ navigation }) => {
                       paddingRight: 12.9,
                     }}
                   >
-                    <IconCarPartner fill="#999999" />
+                    <IconCar fill="#999999" />
                   </View>
                   <View
                     style={{

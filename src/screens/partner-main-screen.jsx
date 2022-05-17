@@ -15,7 +15,7 @@ import {
   SectionList,
   SectionReward,
 } from "./partner-main-screen-style"
-import Tag from "./../components/Tag"
+import { Tag, RewardCard } from "./../components"
 const LogoMocar = require("./../../assets/logo.png")
 const ImgMocar = require("./../../assets/Grupo_348.png")
 
@@ -42,6 +42,7 @@ const PartnerMainScreen = ({ navigation }) => (
         />
         <Tag backgroundColor="#f2a4a4" color="#c40000" LabelName="distantes" />
       </SectionLegend>
+      <RewardCard backgroundColor="#cef2a4" color="red" title="Titulo" />
     </SectionList>
   </Container>
 )

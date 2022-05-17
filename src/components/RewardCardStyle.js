@@ -1,12 +1,12 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  height: 17px;
-  margin: 11px 2px 13px 0px;
+  height: 65px;
+  margin: 0 16px 16px;
   border-radius: 9px;
 `;
 
-export const LabelTag = styled.Text`
+export const Title = styled.Text`
   font-family: Roboto-Medium;
   font-size: 12px;
   text-align: left;

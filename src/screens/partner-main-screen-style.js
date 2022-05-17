@@ -80,9 +80,9 @@ export const SectionLegend = styled.View`
 `;
 
 export const TagNear = styled.View`
-  padding: 4px;
+  height: 17px;
   margin: 11px 2px 13px 0px;
-  border-radius: 16px;
+  border-radius: 9px;
   background-color: #cef2a4;
 `;
 

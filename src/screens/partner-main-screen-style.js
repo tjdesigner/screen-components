@@ -1,4 +1,7 @@
 import styled from 'styled-components/native';
+import {Platform} from 'react-native'
+
+console.log(Platform.OS === "ios")
 
 export const Container = styled.ScrollView.attrs({
   contentContainerStyle: {
@@ -10,7 +13,8 @@ export const Container = styled.ScrollView.attrs({
 `;
 
 export const Header = styled.View`
-  height: 66px;
+  height: ${Platform.OS === "ios" ? `${116}px` : 65};;
+  padding-top: ${Platform.OS === "ios" ? `${50}px` : 0};
   flex-direction: row;
   justify-content: space-around;
   background-color: #6e6e6e;
@@ -48,19 +52,24 @@ export const LabelRewardInfo = styled.Text`
   color: #4d4d4d;
 `;
 
-export const LabelReward = styled.Text`
-  margin: 6px 32px 18.5px 33px;
+export const RewardHighlightContainer = styled.View`
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: row;
+`;
+
+export const RewardHighlightValue= styled.Text`
   font-family: Roboto-Bold;
   font-size: 38px;
-  text-align: left;
+  margin-left: 8px;
   color: #292929;
 `;
 
 export const Divisor = styled.View`
   height: 1px;
-  margin: 0px 9.5px 9.5px 10.5px;
+  margin: 18px 16px 0;
   opacity: 0.45;
-  background-color: #4b4b4b;
+  background-color: #4d4d4d;
 `;
 
 export const SectionList = styled.View``;
@@ -73,17 +82,14 @@ export const LabelTitleList = styled.Text`
   color: #4d4d4d;
 `;
 
+export const MoedaBRL = styled.Text`
+  font-size: 16px;
+`
+
 export const SectionLegend = styled.View`
   flex-direction: row;
-  justify-content: space-around;
-  margin: 0px 16px 0px 16px;
-`;
-
-export const TagNear = styled.View`
-  height: 17px;
-  margin: 11px 2px 13px 0px;
-  border-radius: 9px;
-  background-color: #cef2a4;
+  justify-content: space-between;
+  padding: 0 16px ;
 `;
 
 export const LabelTagNear = styled.Text`
@@ -92,13 +98,6 @@ export const LabelTagNear = styled.Text`
   text-align: left;
   color: #138b13;
   margin: 0px 24px 1px 24px;
-`;
-
-export const TagMedium = styled.View`
-  height: 17px;
-  margin: 11px 2px 13px 16px;
-  border-radius: 9px;
-  background-color: #fbdd68;
 `;
 
 export const LabelTagMedium = styled.Text`

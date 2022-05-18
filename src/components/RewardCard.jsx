@@ -4,7 +4,7 @@ import {
   IconContainer,
   Badge,
   TextContainer,
-  Title,
+  Address,
   LabelContainer,
   Label,
   Reward,
@@ -49,9 +49,9 @@ const RewardCard = (props) => {
         )}
       </IconContainer>
       <TextContainer>
-        <Title style={{ color: props.color, fontFamily: "Roboto" }}>
+        <Address style={{ color: props.addressColor, fontFamily: "Roboto" }}>
           {props.address}
-        </Title>
+        </Address>
         <LabelContainer>
           <Label style={{ color: props.LabelRewardTextColor }}>
             {props.labelReward}

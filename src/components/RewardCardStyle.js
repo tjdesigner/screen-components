@@ -2,7 +2,6 @@ import styled from 'styled-components/native';
 import { Dimensions } from 'react-native';
 
 const totalWidthScreen  = Dimensions.get('window').width;
-console.log(totalWidthScreen)
 
 export const CardPrtnerContainer = styled.View`
   height: 65px;
@@ -30,13 +29,13 @@ export const Badge = styled.View`
 
 export const TextContainer = styled.View`
   height: 65px;
-  width: ${totalWidthScreen - 90};
+  width: ${`${totalWidthScreen - 90}px`};
   border-radius: 9px;
   justify-content: space-between;
   padding-right: 23px ;
 `;
 
-export const Title = styled.Text`
+export const Address = styled.Text`
   font-family: Roboto-Medium;
   font-size: 16px;
   text-align: left;

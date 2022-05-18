@@ -141,6 +141,7 @@ const PartnerMainScreen = ({ navigation }) => {
           <RewardCard
             carList={card.carList.map((car, index) => (
               <View
+                key={index}
                 height={62}
                 style={{
                   backgroundColor: "#ffffff",
@@ -175,14 +176,21 @@ const PartnerMainScreen = ({ navigation }) => {
                       paddingRight: 12.9,
                     }}
                   >
-                    <Text style={{ fontSize: 18, fontWeight: "bold" }}>
+                    <Text
+                      style={{
+                        fontSize: 18,
+                        fontWeight: "bold",
+                        color: "#4d4d4d",
+                      }}
+                    >
                       {car.carName}
                     </Text>
                     <Text
                       style={{
                         fontSize: 14,
                         fontWeight: "bold",
-                        textTransform: "uppercase",
+                        textTransform: "capitalize",
+                        color: "#4d4d4d",
                       }}
                     >
                       {car.carColor}
@@ -207,7 +215,8 @@ const PartnerMainScreen = ({ navigation }) => {
                   <Text
                     style={{
                       fontSize: 10,
-                      textTransform: "uppercase",
+                      textTransform: "capitalize",
+                      color: "#4d4d4d",
                     }}
                   >
                     Placa
@@ -217,6 +226,7 @@ const PartnerMainScreen = ({ navigation }) => {
                       fontSize: 24,
                       fontWeight: "bold",
                       textTransform: "uppercase",
+                      color: "#4d4d4d",
                     }}
                   >
                     {car.placa}
@@ -235,6 +245,7 @@ const PartnerMainScreen = ({ navigation }) => {
             LabelRewardTextColor="#4d4d4d"
             RewardTextColor="#4d4d4d"
             address={card.address}
+            addressColor="#4d4d4d"
             labelReward="Recompensa (R$)"
             rewardValue={formataMoeda(1000)}
           />

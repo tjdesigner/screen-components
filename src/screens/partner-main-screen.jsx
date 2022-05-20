@@ -5,55 +5,55 @@ const mockDataCarList = [
     id: 1,
     badgeValue: 1,
     address: "SQS 212 - Bloco B - Brasilia - DF",
-    reward: 1000,
+    reward: 12300,
     distance: "proximo",
     carList: [
-      { carName: "Fiat Uno", carColor: "branco", placa: "JEV 9092" },
-      { carName: "Variante", carColor: "azul", placa: "PAZ 2022" },
+      { carName: "Fiat Uno", carColor: "branco", placa: "JEV5748" },
+      { carName: "Corsa", carColor: "azul", placa: "JPW2134" },
     ],
   },
   {
     id: 2,
     badgeValue: 3,
     address: "SQS 212 - Bloco B - Brasilia - DF",
-    reward: 1000,
+    reward: 14500,
     distance: "media_distancia",
     carList: [
-      { carName: "Fiat Uno", carColor: "branco", placa: "JEV 9092" },
-      { carName: "Variante", carColor: "azul", placa: "PAZ 2022" },
+      { carName: "Ford Ka", carColor: "preto", placa: "REH4355" },
+      { carName: "Fiat Palio", carColor: "vermelho", placa: "JEJ7632" },
     ],
   },
   {
     id: 3,
     badgeValue: 5,
     address: "SQS 212 - Bloco B - Brasilia - DF",
-    reward: 1000,
+    reward: 33000,
     distance: "media_distancia",
     carList: [
-      { carName: "Fiat Uno", carColor: "branco", placa: "JEV 9092" },
-      { carName: "Variante", carColor: "azul", placa: "PAZ 2022" },
+      { carName: "March", carColor: "prata", placa: "FYZ9901" },
+      { carName: "HB20S", carColor: "branco", placa: "PAY2215" },
     ],
   },
   {
     id: 4,
     badgeValue: 2,
     address: "SQS 212 - Bloco B - Brasilia - DF",
-    reward: 1000,
+    reward: 35000,
     distance: "distantes",
     carList: [
-      { carName: "Fiat Uno", carColor: "branco", placa: "JEV 9092" },
-      { carName: "Variante", carColor: "azul", placa: "PAZ 2022" },
+      { carName: "Civic", carColor: "cinza", placa: "HGG9092" },
+      { carName: "Gol", carColor: "prata", placa: "HJA2022" },
     ],
   },
   {
     id: 5,
     badgeValue: 7,
     address: "SQS 212 - Bloco B - Brasilia - DF",
-    reward: 1000,
+    reward: 25200,
     distance: "distantes",
     carList: [
-      { carName: "Fiat Uno", carColor: "branco", placa: "JEV 9092" },
-      { carName: "Variante", carColor: "azul", placa: "PAZ 2022" },
+      { carName: "HB20", carColor: "branco", placa: "KLQ1377" },
+      { carName: "Fiat Punto", carColor: "azul", placa: "QRQ5534" },
     ],
   },
 ]
@@ -89,6 +89,11 @@ const PartnerMainScreen = ({ navigation }) => {
     } else {
       return "#f2a4a4"
     }
+  }
+
+  const applyMask = (str, mask) => {
+    let i = 0
+    return mask.replaceAll("x", () => str[i++] || "")
   }
 
   const getIconColor = (distance) => {
@@ -229,7 +234,7 @@ const PartnerMainScreen = ({ navigation }) => {
                       color: "#4d4d4d",
                     }}
                   >
-                    {car.placa}
+                    {applyMask(car.placa, "xxx-xx**")}
                   </Text>
                 </View>
               </View>
@@ -247,7 +252,7 @@ const PartnerMainScreen = ({ navigation }) => {
             address={card.address}
             addressColor="#4d4d4d"
             labelReward="Recompensa (R$)"
-            rewardValue={formataMoeda(1000)}
+            rewardValue={formataMoeda(card.reward)}
           />
         ))}
       </SectionList>

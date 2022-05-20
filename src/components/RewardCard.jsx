@@ -49,7 +49,10 @@ const RewardCard = (props) => {
         )}
       </IconContainer>
       <TextContainer>
-        <Address style={{ color: props.addressColor, fontFamily: "Roboto" }}>
+        <Address
+          numberOfLines={1}
+          style={{ color: props.addressColor, fontFamily: "Roboto" }}
+        >
           {props.address}
         </Address>
         <LabelContainer>

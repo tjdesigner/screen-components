@@ -4,7 +4,7 @@ const mockDataCarList = [
   {
     id: 1,
     badgeValue: 1,
-    address: "SQS 212 - Bloco B - Brasilia - DF",
+    address: "SQS 212 - Bloco B - Brasilia-DF",
     reward: 12300,
     distance: "proximo",
     carList: [
@@ -15,7 +15,7 @@ const mockDataCarList = [
   {
     id: 2,
     badgeValue: 3,
-    address: "SQS 212 - Bloco B - Brasilia - DF",
+    address: "Shln - Asa Norte - Brasília - DF",
     reward: 14500,
     distance: "media_distancia",
     carList: [
@@ -26,7 +26,7 @@ const mockDataCarList = [
   {
     id: 3,
     badgeValue: 5,
-    address: "SQS 212 - Bloco B - Brasilia - DF",
+    address: "QI 4 - St. Hab Ind Norte - Brasília - DF",
     reward: 33000,
     distance: "media_distancia",
     carList: [
@@ -37,7 +37,7 @@ const mockDataCarList = [
   {
     id: 4,
     badgeValue: 2,
-    address: "SQS 212 - Bloco B - Brasilia - DF",
+    address: "St. Tradicional Q 66 - Planaltina - Brasília - DF",
     reward: 35000,
     distance: "distantes",
     carList: [
@@ -48,7 +48,7 @@ const mockDataCarList = [
   {
     id: 5,
     badgeValue: 7,
-    address: "SQS 212 - Bloco B - Brasilia - DF",
+    address: " Quadra 8 - Sobradinho - Brasília - DF",
     reward: 25200,
     distance: "distantes",
     carList: [
